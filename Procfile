@@ -1,1 +1,1 @@
-web: npm install -g serve && serve -l 80 -s build
+web: npm start
