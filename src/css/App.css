@@ -1,0 +1,253 @@
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card-body {
+  min-height: 300px;
+  min-width: 300px;
+  margin-right: 5px;
+}
+
+#wrapper {
+	background-color: red;
+}
+
+.fdeals {
+  background-color: tomato;
+  padding: 40px !important;
+}
+
+.scroll {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.carousel-item{
+  height: 200px;
+} 
+.carousel-item img{
+  height: 200px;
+}
+
+.adjustpadding{
+  padding: 50px !important;
+}
+
+.featureddeals{
+  background-color: navy;
+  padding: 35px !important;
+}
+
+.cardsBG{
+  background-color: crimson;
+}
+
+.talignleft_stores {
+  text-align: left;
+  color: #eee;
+  font-weight: bolder;
+}
+
+.stores{
+  background-color: #333ff3 ;
+  padding: 30px 20px 30px 20px !important;
+}
+
+.narticles{
+  background-color: silver ;
+  padding: 30px 20px 30px 20px !important;
+}
+
+/* ////tabs css */
+
+/* Tabs*/
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+#tabs{
+background: #007b5e;
+  color: #eee;
+}
+#tabs h6.section-title{
+  color: #eee;
+}
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #f3f3f3;
+  background-color: transparent;
+  border-color: transparent transparent #f3f3f3;
+  border-bottom: 4px solid !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  color: #eee;
+  font-size: 20px;
+}
+
+/* ///// */
+
+.whywastemoney{
+  background-color:steelblue;
+  color: whitesmoke;
+}
+
+.login{
+background-color: wheat;
+}
+
+.signup{
+background-color: orange;
+min-height: 100%;
+}
+
+.card-body{
+  padding: 0.5rem !important;
+}
+
+.cardpadding{
+  padding-left: 3px ;
+  padding-top: 1px ;
+  padding-bottom: 3px ;
+  padding-right: 0px;
+}
+
+
+.footer {
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  line-height: 50px; /* Vertically center the text there */
+}
+
+.rowpadding{
+  padding-top: 65px;
+}
+
+.apptheme{
+  background-color: black;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  background-color: black;
+  color: white;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  opacity: .7;
+}
+
+.containerposition {
+  position: relative;
+}
+
+.cardwidth{
+  width: 100px;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+.heading {
+  font-weight: 500;
+}
+.subheading {
+  font-weight: 300;
+}
+
+.megamenu-li {
+	position: static;
+}
+
+.megamenu {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	padding: 15px;
+}
+
+.single-post-sidebar-meta-author,h5
+{
+  display: block;margin-top: 4px;margin-left: 4px;font-weight: 900;line-height: 1
+}
+.single-post-sidebar-meta{
+  font-size: 0;font-family: Inter;
+}
+.single-post-sidebar-meta-avatar{
+  width: 16.66667%;font-size: 16px;display: inline-block;vertical-align: top;box-sizing: border-box;padding-left: 0;padding-right: 20px
+}
+.single-post-sidebar-meta-details{
+  width: 83.33333%;font-size: 16px;display: inline-block;vertical-align: top;box-sizing: border-box;padding-left: 20px;padding-right: 0;text-align: left;
+}
+.single-post-sidebar-meta-author-count{
+  display: block;margin-top: 4px;margin-left: 4px;font-weight: 700;line-height: 1
+}
+.single-post-sidebar-meta-author-biography{
+  padding: 0;margin: 20px -5px 34px;font-size: 14px
+}
+.forms {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
