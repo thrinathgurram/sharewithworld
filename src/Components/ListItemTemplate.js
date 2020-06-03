@@ -7,7 +7,7 @@ class ListItemTemplate extends Component {
     };
 
     componentDidMount() {
-        fetch('http://productservices.herokuapp.com/products/')
+        fetch('https://productservices.herokuapp.com/products/')
         .then(res => res.json())
         .then((data) => {
             this.setState({ articles: data })

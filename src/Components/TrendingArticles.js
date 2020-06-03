@@ -8,7 +8,7 @@ class TrendingArticles extends Component {
     state = { articles: [] };
 
     componentDidMount() {
-        fetch('http://productservices.herokuapp.com/posts/?page=1&limit=10')
+        fetch('https://productservices.herokuapp.com/posts/?page=1&limit=10')
             .then(res => res.json())
             .then((data) => {
                 console.log(data.result.docs._id)

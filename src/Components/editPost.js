@@ -64,7 +64,7 @@ function EditPost(props) {
             //userID: user.userData._id
         }
 
-        axios.put(`http://productservices.herokuapp.com/posts?id=${id}`, variables)
+        axios.put(`https://productservices.herokuapp.com/posts?id=${id}`, variables)
             .then(response => {
                 if (response) {
                     message.success('Post Created!');

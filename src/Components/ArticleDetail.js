@@ -25,7 +25,7 @@ function ArticleDetail({match,state}) {
 
 
     const fetchItem = async () => {
-        const fetchItems = await fetch(`http://productservices.herokuapp.com/posts/?id=${match.params._id}`);
+        const fetchItems = await fetch(`https://productservices.herokuapp.com/posts/?id=${match.params._id}`);
         fetchItems.json()
         .then(fetchItems => setItem(fetchItems.post))
         .catch(err => setErrors(true));
@@ -33,7 +33,7 @@ function ArticleDetail({match,state}) {
     };
 
     const fetchAuhtor = async () => {
-        const fetchAuhtor = await fetch(`http://productservices.herokuapp.com/posts/author?id=5ea6ed51c8fb34ea748f43bd`);
+        const fetchAuhtor = await fetch(`https://productservices.herokuapp.com/posts/author?id=5ea6ed51c8fb34ea748f43bd`);
         fetchAuhtor.json()
         .then(fetchAuhtor => setAuthor(fetchAuhtor.author))
         .catch(err => setErrors(true));
