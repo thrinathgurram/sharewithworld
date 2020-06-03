@@ -1,5 +1,5 @@
 {
-  "name": "freestuff",
+  "name": "sharewithworld",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,11 +38,10 @@
     "styled-components": "^5.1.0",
     "yup": "^0.29.1"
   },
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "serve": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "webpack",
+    "start": "webpack-dev-server --watch",
+    "start-server": "nodemon server/server.js"
   }
 }
