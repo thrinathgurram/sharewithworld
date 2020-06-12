@@ -8,6 +8,7 @@ import * as Yup from 'yup';
 import { Form, Input, Button, Checkbox, Typography } from 'antd';
 import { useDispatch } from "react-redux";
 import Icon from '@ant-design/icons';
+import  'antd/dist/antd.css';
 const { Title } = Typography;
 
 
@@ -46,14 +47,16 @@ function LoginForm(props) {
 
           dispatch(login(dataToSubmit))
             .then(response => {
+              alert(JSON.stringify(response))
               if (response.payload.loginSuccess) {
+                alert(JSON.stringify(response.payload))
                 props.history.push("/trendingarticles");
               } else {
                 setFormErrorMessage('Check out your Account or Password again')
               }
             })
-            .catch(err => {
-              setFormErrorMessage('Check out your Account or Password again')
+            .catch(error => {
+              setFormErrorMessage(error.response.data.message)
               setTimeout(() => {
                 setFormErrorMessage("")
               }, 3000);
@@ -78,7 +81,6 @@ function LoginForm(props) {
           <div className="forms">
             <Title level={2}>Log In</Title>
             <form onSubmit={handleSubmit} style={{ width: '350px' }}>
-
               <Form.Item required>
                 <Input
                   id="email"

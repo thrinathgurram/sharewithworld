@@ -65,7 +65,7 @@ function ArticleDetail({match,state}) {
                 <div class="col-sm-3 offset-sm-1">
                 <div class="single-post-sidebar-meta">
                     <Link class="single-post-sidebar-meta-avatar" to={`/AuthorPage/${author._id}`}>
-                    <img alt="" src="https://res.cloudinary.com/dtvxe0tur/image/upload/v1589513476/d9eggbdzz6vxtrcoqioz.png" srcset="https://res.cloudinary.com/dtvxe0tur/image/upload/v1589513476/d9eggbdzz6vxtrcoqioz.png" class="avatar avatar-64 photo" height="55" width="55"/>
+                    <img alt="" src="https://res.cloudinary.com/dtvxe0tur/image/upload/v1589513476/d9eggbdzz6vxtrcoqioz.png" srcset="https://res.cloudinary.com/dtvxe0tur/image/upload/v1589513476/d9eggbdzz6vxtrcoqioz.png" class="avatar avatar-64 photo rounded-circle" height="55" width="55"/>
                     </Link>
                     <div class="single-post-sidebar-meta-details">
                     <h5 class="single-post-sidebar-meta-author"><Link to={`/AuthorPage/${author._id}`}>{author.firstName}</Link></h5>

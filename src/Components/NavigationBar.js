@@ -37,16 +37,16 @@ class NavigationBar extends Component {
 
     const userLinks = (
       <ul className="nav navbar-nav navbar-right">
-        <Nav.Item><Nav.Link href="/create" style={{marginLeft: '3em'}}>CREATE POST</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link href="" style={{marginLeft: '4em'}}>{this.props.user.username}</Nav.Link></Nav.Item>
+        <Nav.Item><Nav.Link><Link to="/create">CREATE POST</Link></Nav.Link></Nav.Item>
+        <Nav.Item><Nav.Link href="">{this.props.user.username}</Nav.Link></Nav.Item>
         <Nav.Item><Nav.Link href="#" onClick={this.logout.bind(this)}>Logout</Nav.Link></Nav.Item>
       </ul>
     );
 
     const guestLinks = (
       <ul className="nav navbar-nav navbar-right">
-      <Nav.Item><Nav.Link href="/login">Login</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href="/signup">signup</Nav.Link></Nav.Item></ul>
+      <Nav.Item><Nav.Link ><Link to="/login">Login</Link></Nav.Link></Nav.Item>
+      <Nav.Item><Nav.Link ><Link to="/signup">signup</Link></Nav.Link></Nav.Item></ul>
     );
 
     return (
@@ -54,7 +54,7 @@ class NavigationBar extends Component {
 
       <Styles>
       <Navbar expand="lg">
-        <Navbar.Brand href="/trendingarticles">My Top 10</Navbar.Brand>
+        <Navbar.Brand><Link to="/trendingarticles">My Top 10</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
        
         <Navbar.Collapse id="basic-navbar-nav">
@@ -96,15 +96,15 @@ class NavigationBar extends Component {
               <NavDropdown.Item href="#action/3.3">Flight Toys</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Toddler Toys</NavDropdown.Item>
             </NavDropdown></Nav.Item>
-            <Nav.Item><Nav.Link href="/about">ABOUT</Nav.Link></Nav.Item>
-      
-          <div class="nav-links navbar-nav">
+            <Nav.Item><Nav.Link><Link to="/about">ABOUT</Link></Nav.Link></Nav.Item>
+
+            <div class="nav-links navbar-nav">
                           <a href="https://www.facebook.com" target="_blank" class="nav-item nav-link" ><FontAwesomeIcon icon={faFacebook} size="lg"/></a>
                           <a href="https://www.twitter.com" target="_blank" class="nav-item nav-link"><FontAwesomeIcon icon={faTwitter} size="lg"/></a>
                           <a href="https://www.youtube.com" target="_blank" class="nav-item nav-link"><FontAwesomeIcon icon={faYoutube} size="lg"/></a>
                           <a href="https://www.telegram.com" target="_blank" class="nav-item nav-link"><FontAwesomeIcon icon={faTelegram} size="lg"/></a>
                           <a href="https://www.whatsapp.com" target="_blank" class="nav-item nav-link"><FontAwesomeIcon icon={faWhatsapp} size="lg"/></a>
-          </div> 
+          </div>             
           <div className="collapse navbar-collapse">
               {this.props.auth ? userLinks : guestLinks}
             </div>

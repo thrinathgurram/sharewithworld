@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { signup } from '../actions/actions';
@@ -41,6 +41,7 @@ const tailFormItemLayout = {
 
 function Signup(props) {
   const dispatch = useDispatch();
+  const [formErrorMessage, setFormErrorMessage] = useState('')
   return (
 
     <Formik
@@ -82,16 +83,25 @@ function Signup(props) {
             firstName: values.name,
             lastName: values.lastName,
             bio:values.bio,
-            profileImage: `http://gravatar.com/avatar/${moment().unix()}?d=identicon`
+            profileImage: `https://gravatar.com/avatar/${moment().unix()}?d=identicon`
           };
 
           dispatch(signup(dataToSubmit)).then(response => {
-            if (response.payload.success) {
-              props.history.push("/login");
+            if (response.data.success) {
+              setTimeout(() => {
+                setFormErrorMessage("congratulations you have succesfully registered. "+response.data.message)
+              }, 8000);
             } else {
               alert(response.payload.err.errmsg)
             }
-          })
+          })            
+          .catch(error => {
+            if(error){
+            setFormErrorMessage(error.response.data.message)}
+            setTimeout(() => {
+              setFormErrorMessage("")
+            }, 3000);
+          });
 
           setSubmitting(false);
         }, 500);
@@ -110,9 +120,9 @@ function Signup(props) {
           handleReset,
         } = props;
         return (
-          <div className="forms" style={{margin:'110px'}}>
-            <h2>Sign up</h2>
-            <Form  {...formItemLayout} onSubmit={handleSubmit} >
+          <div className="forms" style={{margin:'40px'}}>
+            <h4>Sign up</h4>
+            <Form  {...formItemLayout} size="small" onSubmit={handleSubmit} >
 
               <Form.Item required label="First Name">
                 <Input
@@ -231,7 +241,9 @@ function Signup(props) {
                   <div className="input-feedback">{errors.confirmPassword}</div>
                 )}
               </Form.Item>
-
+              {formErrorMessage && (
+                <label ><p style={{ color: '#ff0000bf', fontSize: '0.7rem', border: '1px solid', padding: '1rem', borderRadius: '10px' }}>{formErrorMessage}</p></label>
+              )}
               <Form.Item {...tailFormItemLayout}>
                 <Button onClick={handleSubmit} type="primary" disabled={isSubmitting}>
                   Submit
